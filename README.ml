@@ -1,3 +1,11 @@
+http_grabber
+============
+
+interpret http data in view of a classification of websites and general information
+
+git repository: https://github.com/millesabords/http_grabber.git
+
+usage:
 CMake -G "Unix Makefiles"
 make help
 +delete old cmake config files, and add this in exclude list of "make dist" rule
