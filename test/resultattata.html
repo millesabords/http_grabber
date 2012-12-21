@@ -1,0 +1,2436 @@
+Date: Mon, 10 Dec 2012 14:04:19 GMT
+Server: Apache/2.2.21 (Unix)
+Set-Cookie: bb_lastvisit=1355148259; expires=Tue, 10-Dec-2013 14:04:19 GMT; path=/
+Set-Cookie: bb_lastactivity=0; expires=Tue, 10-Dec-2013 14:04:19 GMT; path=/
+Cache-Control: max-age=1, private, must-revalidate
+Pragma: private
+Set-Cookie: skimlinks_enabled=1
+Set-Cookie: bb_np_notices_displayed=1; path=/
+Expires: Mon, 10 Dec 2012 14:04:20 GMT
+Vary: Accept-Encoding,User-Agent
+Connection: close
+Content-Type: text/html; charset=utf-8
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en" id="vbulletin_html">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta id="e_vb_meta_bburl" name="vb_meta_bburl" content="http://www.qtcentre.org" />
+<base href="http://www.qtcentre.org/" /><!--[if IE]></base><![endif]-->
+<meta name="generator" content="vBulletin 4.1.9" />
+<link rel="search" type="application/opensearchdescription+xml" href="/qtcentre_search.xml" title="QtCentre" />
+
+	<link rel="Shortcut Icon" href="favicon.ico" type="image/x-icon" />
+
+
+
+
+
+
+
+
+	<script type="text/javascript" src="clientscript/yui/yuiloader-dom-event/yuiloader-dom-event.js?v=419"></script>
+	<script type="text/javascript" src="clientscript/yui/connection/connection-min.js?v=419"></script>
+
+<script type="text/javascript">
+<!--
+	var SESSIONURL = "s=b1a8fe580091451a6747daffc2c78450&";
+	var SECURITYTOKEN = "guest";
+	var IMGDIR_MISC = "images/misc";
+	var IMGDIR_BUTTON = "images/buttons";
+	var vb_disable_ajax = parseInt("0", 10);
+	var SIMPLEVERSION = "419";
+	var BBURL = "http://www.qtcentre.org";
+	var LOGGEDIN = 0 > 0 ? true : false;
+	var THIS_SCRIPT = "showthread";
+	var RELPATH = "threads/3514-CMake-and-pthreads";
+	var PATHS = {
+		forum : "",
+		cms   : "",
+		blog  : ""
+	};
+	var AJAXBASEURL = "http://www.qtcentre.org/";
+// -->
+</script>
+<script type="text/javascript" src="http://www.qtcentre.org/clientscript/vbulletin-core.js?v=419"></script>
+
+
+
+	<link rel="alternate" type="application/rss+xml" title="Qt Centre Forum RSS Feed" href="http://www.qtcentre.org/external.php?type=RSS2" />
+	
+		<link rel="alternate" type="application/rss+xml" title="Qt Centre Forum - General Discussion - RSS Feed" href="http://www.qtcentre.org/external.php?type=RSS2&amp;forumids=10" />
+	
+
+
+
+	<link rel="stylesheet" type="text/css" href="clientscript/vbulletin_css/style00004l/main-rollup.css?d=1354299659" />
+        
+
+	<!--[if lt IE 8]>
+	<link rel="stylesheet" type="text/css" href="clientscript/vbulletin_css/style00004l/popupmenu-ie.css?d=1354299659" />
+	<link rel="stylesheet" type="text/css" href="clientscript/vbulletin_css/style00004l/vbulletin-ie.css?d=1354299659" />
+	<link rel="stylesheet" type="text/css" href="clientscript/vbulletin_css/style00004l/vbulletin-chrome-ie.css?d=1354299659" />
+	<link rel="stylesheet" type="text/css" href="clientscript/vbulletin_css/style00004l/vbulletin-formcontrols-ie.css?d=1354299659" />
+	<link rel="stylesheet" type="text/css" href="clientscript/vbulletin_css/style00004l/editor-ie.css?d=1354299659" />
+	<![endif]-->
+
+
+<script type="text/javascript" src="clientscript/post_thanks.js"></script>
+
+<style type="text/css">
+.postbitlegacy .postfoot .textcontrols a.post_thanks_button, .postbit .postfoot .textcontrols a.post_thanks_button  {
+	background: url(images/buttons/post_thanks.png) no-repeat transparent left;
+	padding-left: 20px;
+}
+.postbitlegacy .postfoot .textcontrols a.post_thanks_button:hover, .postbit .postfoot .textcontrols a.post_thanks_button:hover  {
+	background: url(images/buttons/post_thanks-hover.png) no-repeat transparent left;
+</style>
+ 
+	<meta name="keywords" content="found,error,cmake,library,attempt,built,target,link,/usr/lib/libqtcore.so,project,check,pthreads,pthread_create,compiler,working,gmake[1],connect,remove,gethostbyname,/usr/lib/libx11.so/usr/lib/libxext.so,`/home/indigojo/cvs/0.3/catkin-qtm/cmakefiles/cmaketmp,xopendisplay,shmat,q_ws_win,directory,pthread,dcheck_function_exists=pthread_create,/usr/bin/cmake,/usr/bin/gcc,pthread.h,iceconnectionnumber,4.1.4,reads,non-existent,q_ws_mac,size,q_ws_x11,works,collect2,suppress,leaving,gmake,[cmtrycompileexec],status,exit,returned,game,cmakefiles/cmtrycompileexec.dir/cmake_clean_target.cmake,cmtrycompileexec,fpic" />
+	<meta name="description" content="Hi everyone, 
+ 
+Does anyone know how to get CMake to configure properly without looking for a non-existent &quot;pthreads&quot; library?  I'm using Qt 4.1.4 in packages on Fedora Core 5.  My output reads as follows: 
+ 
+-- Check for working C compiler: gcc 
+-- Check for working C compiler: gcc -- works 
+-- Check size of void* 
+-- Check size of void* - done 
+-- Check for working CXX compiler: c++ 
+-- Check for working CXX compiler: c++ -- works" />
+
+	<title> CMake and pthreads</title>
+	<link rel="canonical" href="threads/3514-CMake-and-pthreads?s=b1a8fe580091451a6747daffc2c78450" />
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+		<link rel="stylesheet" type="text/css" href="clientscript/vbulletin_css/style00004l/showthread-rollup.css?d=1354299659" />
+	
+	<!--[if lt IE 8]><link rel="stylesheet" type="text/css" href="clientscript/vbulletin_css/style00004l/toolsmenu-ie.css?d=1354299659" />
+	<link rel="stylesheet" type="text/css" href="clientscript/vbulletin_css/style00004l/postlist-ie.css?d=1354299659" />
+	<link rel="stylesheet" type="text/css" href="clientscript/vbulletin_css/style00004l/showthread-ie.css?d=1354299659" />
+	<link rel="stylesheet" type="text/css" href="clientscript/vbulletin_css/style00004l/postbit-ie.css?d=1354299659" />
+	<link rel="stylesheet" type="text/css" href="clientscript/vbulletin_css/style00004l/poll-ie.css?d=1354299659" /><![endif]-->
+<link rel="stylesheet" type="text/css" href="clientscript/vbulletin_css/style00004l/additional.css?d=1354299659" />
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-12318426-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+  })();
+</script>
+</head>
+
+<body>
+
+<div class="above_body"> <!-- closing tag is in template navbar -->
+<a href="/biteme/"></a>
+<div id="header" class="floatcontainer doc_header">
+	<div><a name="top" href="forum.php?s=b1a8fe580091451a6747daffc2c78450" class="logo-image"><img src="images/qtcentre/QtCentre.png" alt="Qt Centre Forum" /></a></div>
+	<div id="toplinks" class="toplinks">
+		
+			<ul class="nouser">
+			
+				<li><a href="register.php?s=b1a8fe580091451a6747daffc2c78450" rel="nofollow">Register</a></li>
+			
+				<li><a rel="help" href="faq.php?s=b1a8fe580091451a6747daffc2c78450">Help</a></li>
+				<li>
+			<script type="text/javascript" src="clientscript/vbulletin_md5.js?v=419"></script>
+			<form id="navbar_loginform" action="login.php?s=b1a8fe580091451a6747daffc2c78450&amp;do=login" method="post" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)">
+				<fieldset id="logindetails" class="logindetails">
+					<div>
+						<div>
+					<input type="text" class="textbox default-value" name="vb_login_username" id="navbar_username" size="10" accesskey="u" tabindex="101" value="User Name" />
+					<input type="password" class="textbox" tabindex="102" name="vb_login_password" id="navbar_password" size="10" />
+					<input type="text" class="textbox default-value" tabindex="102" name="vb_login_password_hint" id="navbar_password_hint" size="10" value="Password" style="display:none;" />
+					<input type="submit" class="loginbutton" tabindex="104" value="Log in" title="Enter your username and password in the boxes provided to login, or click the 'register' button to create a profile for yourself." accesskey="s" />
+						</div>
+					</div>
+				</fieldset>
+				<div id="remember" class="remember">
+					<label for="cb_cookieuser_navbar"><input type="checkbox" name="cookieuser" value="1" id="cb_cookieuser_navbar" class="cb_cookieuser_navbar" accesskey="c" tabindex="103" /> Remember Me?</label>
+				</div>
+
+				<input type="hidden" name="s" value="b1a8fe580091451a6747daffc2c78450" />
+				<input type="hidden" name="securitytoken" value="guest" />
+				<input type="hidden" name="do" value="login" />
+				<input type="hidden" name="vb_login_md5password" />
+				<input type="hidden" name="vb_login_md5password_utf" />
+			</form>
+			<script type="text/javascript">
+			YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "inline");
+			YAHOO.util.Dom.setStyle('navbar_password', "display", "none");
+			vB_XHTML_Ready.subscribe(function()
+			{
+			//
+				YAHOO.util.Event.on('navbar_username', "focus", navbar_username_focus);
+				YAHOO.util.Event.on('navbar_username', "blur", navbar_username_blur);
+				YAHOO.util.Event.on('navbar_password_hint', "focus", navbar_password_hint);
+				YAHOO.util.Event.on('navbar_password', "blur", navbar_password);
+			});
+			
+			function navbar_username_focus(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				if (textbox.value == 'User Name')
+				{
+				//
+					textbox.value='';
+					textbox.style.color='#303030';
+				}
+			}
+
+			function navbar_username_blur(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				if (textbox.value == '')
+				{
+				//
+					textbox.value='User Name';
+					textbox.style.color='#828282';
+				}
+			}
+			
+			function navbar_password_hint(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				
+				YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "none");
+				YAHOO.util.Dom.setStyle('navbar_password', "display", "inline");
+				YAHOO.util.Dom.get('navbar_password').focus();
+			}
+
+			function navbar_password(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				
+				if (textbox.value == '')
+				{
+					YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "inline");
+					YAHOO.util.Dom.setStyle('navbar_password', "display", "none");
+				}
+			}
+			</script>
+				</li>
+				
+			</ul>
+		
+	</div>
+	<div class="ad_global_header">
+		 
+		 
+	</div>
+	<hr />
+</div>
+<div id="navbar" class="navbar">
+	<ul id="navtabs" class="navtabs floatcontainer">
+		
+	<li>
+	
+		<a class="navtab" href="content.php?s=b1a8fe580091451a6747daffc2c78450">Home</a>
+	
+	</li>
+
+		
+			<li class="selected"><a class="navtab" href="forum.php?s=b1a8fe580091451a6747daffc2c78450">Forum</a>
+				<ul class="floatcontainer">
+					
+					
+						
+						<li><a href="search.php?s=b1a8fe580091451a6747daffc2c78450&amp;do=getdaily&amp;contenttype=vBForum_Post">Today's Posts</a></li>
+						
+					
+					
+					
+					
+					<li><a rel="help" href="faq.php?s=b1a8fe580091451a6747daffc2c78450" accesskey="5">FAQ</a></li>
+					
+					
+						<li><a href="calendar.php?s=b1a8fe580091451a6747daffc2c78450">Calendar</a></li>
+					
+					
+					
+					
+					
+					<li class="popupmenu">
+						<a href="javascript://" class="popupctrl">Forum Actions</a>
+						<ul class="popupbody popuphover">
+							<li>
+								<a href="forumdisplay.php?s=b1a8fe580091451a6747daffc2c78450&amp;do=markread&amp;markreadhash=guest">Mark Forums Read</a>
+							</li>
+                                                        
+						</ul>
+					</li>
+					
+					<li class="popupmenu">
+						<a href="javascript://" class="popupctrl" accesskey="3">Quick Links</a>
+						<ul class="popupbody popuphover">
+							
+							
+							<li><a href="showgroups.php?s=b1a8fe580091451a6747daffc2c78450" rel="nofollow">
+								
+									View Site Leaders
+								
+							</a></li>
+							
+							
+							
+							
+							
+							
+						</ul>
+					</li>
+					
+				</ul>
+
+			</li>
+		
+		
+
+
+	
+		<li>
+			<a class="navtab" href="/wiki">Wiki</a>
+		</li>
+	
+
+
+		 
+	<li><a class="navtab" href="doc.php?s=b1a8fe580091451a6747daffc2c78450">Docs</a></li>
+
+
+ <li><a class="navtab" href="content.php?2?s=b1a8fe580091451a6747daffc2c78450">Contest</a></li>
+
+
+	<li><a class="navtab" href="faq?s=b1a8fe580091451a6747daffc2c78450">FAQ</a></li>
+ 
+	<li><a class="navtab" href="blog.php?s=b1a8fe580091451a6747daffc2c78450">Blogs</a></li>
+
+
+<li><a class="navtab" href="local_links.php?s=b1a8fe580091451a6747daffc2c78450">Links</a></li>
+
+
+		
+			<li><a class="navtab" href="search.php?s=b1a8fe580091451a6747daffc2c78450&amp;do=getdaily&amp;contenttype=vBForum_Post" accesskey="2">What's New?</a></li>
+		
+		
+	</ul>
+
+	
+	<div id="globalsearch" class="globalsearch">
+		<form action="search.php?s=b1a8fe580091451a6747daffc2c78450&amp;do=process" method="post" id="navbar_search" class="navbar_search">
+			
+			<input type="hidden" name="securitytoken" value="guest" />
+			<input type="hidden" name="do" value="process" />
+			<span class="textboxcontainer"><span><input type="text" value="" name="query" class="textbox" tabindex="99"/></span></span>
+			<span class="buttoncontainer"><span><input type="image" class="searchbutton" src="images/buttons/search.png" name="submit" onclick="document.getElementById('navbar_search').submit;" tabindex="100"/></span></span>
+		</form>
+		<ul class="navbar_advanced_search">
+			<li><a href="search.php?s=b1a8fe580091451a6747daffc2c78450" accesskey="4">Advanced Search</a></li>
+		</ul>
+	</div>
+	
+</div>
+</div><!-- closing div for above_body -->
+
+<div class="body_wrapper">
+<div id="breadcrumb" class="breadcrumb">
+	<ul class="floatcontainer">
+		<li class="navbithome"><a href="index.php?s=b1a8fe580091451a6747daffc2c78450" accesskey="1"><img src="images/misc/navbit-home.png" alt="Home" /></a></li>
+		
+	<li class="navbit"><a href="forum.php?s=b1a8fe580091451a6747daffc2c78450">Forum</a></li>
+
+	<li class="navbit"><a href="forums/8-Other?s=b1a8fe580091451a6747daffc2c78450">Other</a></li>
+
+	<li class="navbit"><a href="forums/10-General-Discussion?s=b1a8fe580091451a6747daffc2c78450">General Discussion</a></li>
+
+		
+	<li class="navbit lastnavbit"><span> CMake and pthreads</span></li>
+
+	</ul>
+	<hr />
+</div>
+
+ 
+ 
+
+
+	<form action="profile.php?do=dismissnotice" method="post" id="notices" class="notices">
+		<input type="hidden" name="do" value="dismissnotice" />
+		<input type="hidden" name="s" value="s=b1a8fe580091451a6747daffc2c78450&amp;" />
+		<input type="hidden" name="securitytoken" value="guest" />
+		<input type="hidden" id="dismiss_notice_hidden" name="dismiss_noticeid" value="" />
+		<input type="hidden" name="url" value="" />
+		<ol>
+			<li class="restore" id="navbar_notice_6">
+	
+	If this is your first visit, be sure to
+		check out the <a href="faq.php?s=b1a8fe580091451a6747daffc2c78450&amp;" target="_blank"><b>FAQ</b></a> by clicking the
+		link above. You may have to <a href="register.php?s=b1a8fe580091451a6747daffc2c78450&amp;" target="_blank"><b>register</b></a>
+		before you can post: click the register link above to proceed. To start viewing messages,
+		select the forum that you want to visit from the selection below.
+</li><li class="restore" id="navbar_notice_1">
+	
+	<p>Welcome to <strong>Qt Centre</strong>.</p>
+
+<p><a href="http://www.qtcentre.org">Qt Centre</a> is a community site devoted to programming in C++ using the <a href="http://qt.nokia.com/products/qt/index.html">Qt framework</a> developed by Nokia. Over 90 percent of questions asked here gets answered. If you are looking for information about Qt related issue &mdash; <strong><a href="register.php">register</a></strong> and post your question.</p>
+
+<p>You are currently viewing our boards as a guest which gives you limited access to view most discussions and access our other features. By joining our <strong>free</strong> community you will have access to post topics, communicate privately with other members (PM), respond to polls, upload content and access many other special features. Registration is fast, simple and absolutely free so please, <a href="http://www.qtcentre.org/register.php"><strong>join our community today</strong></a>! <br /><br />If you have any problems with the registration process or your account login, please <a href="http://www.qtcentre.org/sendmessage.php">contact us</a>.</p>
+</li>
+		</ol>
+	</form>
+
+
+
+
+	<div id="above_postlist" class="above_postlist">
+		
+			<a href="newreply.php?s=b1a8fe580091451a6747daffc2c78450&amp;p=19138&amp;noquote=1" class="newcontent_textcontrol" id="newreplylink_top"><span>+</span> Reply to Thread</a>
+			<img style="display:none" id="progress_newreplylink_top" src="images/misc/progress.gif" alt="" />
+		
+		<div id="pagination_top" class="pagination_top">
+		
+			<div id="postpagestats_above" class="postpagestats">
+				Results 1 to 6 of 6
+			</div>
+		</div>
+	</div>
+	<div id="pagetitle" class="pagetitle">
+		<h1>
+			Thread: <span class="threadtitle"><a href="threads/3514-CMake-and-pthreads?s=b1a8fe580091451a6747daffc2c78450" title="Reload this Page">CMake and pthreads</a></span>
+		</h1>
+		
+	</div>
+	<div id="thread_controls" class="thread_controls toolsmenu">
+		<div>
+		<ul id="postlist_popups" class="postlist_popups popupgroup">
+			
+			
+			<li class="popupmenu" id="threadtools">
+				<h6><a class="popupctrl" href="javascript://">Thread Tools</a></h6>
+				<ul class="popupbody popuphover">
+					<li><a href="printthread.php?s=b1a8fe580091451a6747daffc2c78450&amp;t=3514&amp;pp=20&amp;page=1" accesskey="3" rel="nofollow">Show Printable Version</a></li>
+					
+					<li>
+						
+							<a href="subscription.php?s=b1a8fe580091451a6747daffc2c78450&amp;do=addsubscription&amp;t=3514" rel="nofollow">Subscribe to this Thread&hellip;</a>
+						
+					</li>
+					
+				</ul>
+			</li>
+
+			
+
+			
+				<li class="popupmenu searchthread menusearch" id="searchthread">
+					<h6><a class="popupctrl" href="javascript://">Search Thread</a></h6>
+					<form action="search.php" method="post">
+						<ul class="popupbody popuphover">
+							<li>
+								<input type="text" name="query" class="searchbox" value="Search..." tabindex="13" />
+								<input type="submit" class="button" value="Search" tabindex="14" />
+							</li>
+							<li class="formsubmit">
+								<div class="submitoptions">&nbsp;</div>
+								<div class="advancedsearchlink"><a href="search.php?s=b1a8fe580091451a6747daffc2c78450&amp;search_type=1&amp;searchthreadid=3514&amp;contenttype=vBForum_Post">Advanced Search</a></div>
+							</li>
+						</ul>
+						<input type="hidden" name="s" value="b1a8fe580091451a6747daffc2c78450" />
+						<input type="hidden" name="securitytoken" value="guest" />
+						<input type="hidden" name="do" value="process" />
+						<input type="hidden" name="searchthreadid" value="3514" />
+						<input type="hidden" name="search_type" value="1" />
+						<input type="hidden" name="contenttype" value="vBForum_Post" />
+					</form>
+				</li>
+			
+
+			
+
+			
+				<li class="popupmenu" id="displaymodes">
+					<h6><a class="popupctrl" href="javascript://">Display</a></h6>
+					<ul class="popupbody popuphover">
+						<li><label>Linear Mode</label></li>
+						<li><a href="threads/3514-CMake-and-pthreads?s=b1a8fe580091451a6747daffc2c78450&amp;mode=hybrid"> Switch to Hybrid Mode</a></li>
+						<li><a href="threads/3514-CMake-and-pthreads?s=b1a8fe580091451a6747daffc2c78450&amp;p=19133&amp;mode=threaded#post19133"> Switch to Threaded Mode</a></li>
+					</ul>
+				</li>
+			
+
+			
+			</ul>
+		</div>
+	</div>
+
+<div id="postlist" class="postlist restrain">
+	
+
+	
+		<ol id="posts" class="posts" start="1">
+			
+<li class="postbit postbitim postcontainer old" id="post_19133">
+	<div class="postdetails_noavatar">
+		<div class="posthead">
+                        
+                                <span class="postdate old">
+                                        
+                                                <span class="date">3rd September 2006,&nbsp;<span class="time">20:35</span></span>
+                                        
+                                </span>
+                                <span class="nodecontrols">
+                                        
+                                                <a name="post19133" href="threads/3514-CMake-and-pthreads?s=b1a8fe580091451a6747daffc2c78450&amp;p=19133#post19133" class="postcounter">#1</a><a id="postcount19133" name="1"></a>
+                                        
+                                        
+                                        
+                                </span>
+                        
+		</div>
+
+		<div class="userinfo_noavatar">
+			<div class="contact">
+				
+				<div class="username_container">
+					
+						<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="members/144-Matt-Smith?s=b1a8fe580091451a6747daffc2c78450" title="Matt Smith is offline"><strong>Matt Smith</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<img src="images/site_icons/profile.png" alt="" />
+			<a href="members/144-Matt-Smith?s=b1a8fe580091451a6747daffc2c78450">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<img src="images/site_icons/forum.png" alt="" />
+			<a href="search.php?s=b1a8fe580091451a6747daffc2c78450&amp;do=finduser&amp;userid=144&amp;contenttype=vBForum_Post&amp;showposts=1" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		
+		
+		<li class="right">
+			<img src="images/site_icons/blog.png" alt="" />
+			<a href="blog.php?s=b1a8fe580091451a6747daffc2c78450&amp;u=144" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		<li class="left">
+			<img src="images/site_icons/homepage.png" alt="" />
+			<a href="http://www.blogistan.co.uk/qt/" rel="nofollow">
+				Visit Homepage
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<img src="images/site_icons/article.png" alt="" />
+			<a href="list.php/author/144-Matt Smith" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+
+						<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="Matt Smith is offline" border="0" />
+
+					
+					<span class="usertitle">
+						Novice
+					</span>
+					
+
+                                        
+					
+						<span class="postbit_reputation" id="repdisplay_19133_144" title="Matt Smith is on a distinguished road">
+							
+								<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />
+							
+						</span>
+					
+					
+						<div class="imlinks">
+							    
+						</div>
+					
+				</div>
+<div class="username_container" style="margin-left: 5em;">
+ 
+</div>
+			</div>
+			
+				<div class="userinfo_extra">
+					<dl class="userstats">
+						<dt>Join Date</dt> <dd>Jan 2006</dd>
+						<dt>Location</dt> <dd>New Malden (near London)</dd>
+						
+						<dt>Posts</dt> <dd>32</dd>	
+						
+    
+	<dt>Thanks</dt> <dd>3</dd>
+    
+    
+	
+		<dd style="white-space:nowrap; display:inline; float: right;">Thanked 2 Times in 2 Posts</dd>
+	
+    
+
+  <dt>Qt products</dt>
+  <dd>
+    
+      <img style="height:12px;" src="images/qtcentre/logo16/qt3.png" title="Qt3" alt="Qt3" />
+    
+    
+      <img style="height:12px;" src="images/qtcentre/logo16/qt4.png" title="Qt4" alt="Qt4" />
+    
+    
+    
+    
+    
+    
+
+  </dd>
+
+  <dt>Platforms</dt>
+  <dd>
+    
+      <img style="height:12px; margin-left: 2px;" src="images/qtcentre/logo16/macosx.png" title="MacOS X" alt="MacOS X" />
+    
+    
+      <img style="height:12px; margin-left: 2px;" src="images/qtcentre/logo16/x11.png" title="Unix/X11" alt="Unix/X11" />
+    
+    
+    
+    
+
+    
+  </dd>
+ 
+					</dl>
+					
+					
+				</div>
+			
+		</div>
+	</div>
+
+	<div class="postbody">
+		
+		<div class="postrow">
+		
+		<h2 class="posttitle icon">
+			<img src="images/icons/icon1.png" alt="Default" /> CMake and pthreads
+		</h2>
+		
+				
+					
+					
+				
+				
+		<div class="content">
+			<div id="post_message_19133">
+				<blockquote class="postcontent restore">
+					Hi everyone,<br />
+<br />
+Does anyone know how to get CMake to configure properly without looking for a non-existent &quot;pthreads&quot; library?  I'm using Qt 4.1.4 in packages on Fedora Core 5.  My output reads as follows:<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Qt Code:
+            <div style="width: 11em; float:right; text-align: right; font-size: x-small;">
+              <a onClick="document.getElementById('5dc04ecfaffc471caddc714b0ae650c1_plain').style.display=document.getElementById('5dc04ecfaffc471caddc714b0ae650c1_plain').style.display=='none' ? '' : 'none';document.getElementById('5dc04ecfaffc471caddc714b0ae650c1_pretty').style.display=document.getElementById('5dc04ecfaffc471caddc714b0ae650c1_pretty').style.display=='none' ? '' : 'none'">Switch view</a>
+            </div>
+        </div>
+	<pre class="bbcode_code" id="5dc04ecfaffc471caddc714b0ae650c1_pretty"><pre class="qt" style="font-family:monospace;"><ol><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #000000;">--</span> Check <span style="color: #0000ff;">for</span> working C compiler<span style="color: #000000;">:</span> gcc</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #000000;">--</span> Check <span style="color: #0000ff;">for</span> working C compiler<span style="color: #000000;">:</span> gcc <span style="color: #000000;">--</span> works</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #000000;">--</span> Check size of <span style="color: #0000ff;">void</span><span style="color: #000000;">*</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #000000;">--</span> Check size of <span style="color: #0000ff;">void</span><span style="color: #000000;">*</span> <span style="color: #000000;">-</span> done</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #000000;">--</span> Check <span style="color: #0000ff;">for</span> working CXX compiler<span style="color: #000000;">:</span> c<span style="color: #000000;">++</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #000000;">--</span> Check <span style="color: #0000ff;">for</span> working CXX compiler<span style="color: #000000;">:</span> c<span style="color: #000000;">++</span> <span style="color: #000000;">--</span> works</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #000000;">--</span> Looking <span style="color: #0000ff;">for</span> Q_WS_X11</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #000000;">--</span> Looking <span style="color: #0000ff;">for</span> Q_WS_X11 <span style="color: #000000;">-</span> found</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #000000;">--</span> Looking <span style="color: #0000ff;">for</span> Q_WS_MAC</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #000000;">--</span> Looking <span style="color: #0000ff;">for</span> Q_WS_MAC <span style="color: #000000;">-</span> not found.</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #000000;">--</span> Looking <span style="color: #0000ff;">for</span> Q_WS_WIN</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #000000;">--</span> Looking <span style="color: #0000ff;">for</span> Q_WS_WIN <span style="color: #000000;">-</span> not found.</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #000000;">--</span> Found Qt<span style="color: #000000;">-</span>Version 4.1.4</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #000000;">--</span> Looking <span style="color: #0000ff;">for</span> XOpenDisplay in <span style="color: #000000;">/</span>usr<span style="color: #000000;">/</span>lib<span style="color: #000000;">/</span>libX11.<span style="color: #009900;">so</span>;<span style="color: #000000;">/</span>usr<span style="color: #000000;">/</span>lib<span style="color: #000000;">/</span>libXext.<span style="color: #009900;">so</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #000000;">--</span> Looking <span style="color: #0000ff;">for</span> XOpenDisplay in <span style="color: #000000;">/</span>usr<span style="color: #000000;">/</span>lib<span style="color: #000000;">/</span>libX11.<span style="color: #009900;">so</span>;<span style="color: #000000;">/</span>usr<span style="color: #000000;">/</span>lib<span style="color: #000000;">/</span>libXext.<span style="color: #009900;">so</span> <span style="color: #000000;">-</span> found</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #000000;">--</span> Looking <span style="color: #0000ff;">for</span> gethostbyname</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #000000;">--</span> Looking <span style="color: #0000ff;">for</span> gethostbyname <span style="color: #000000;">-</span> found</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #000000;">--</span> Looking <span style="color: #0000ff;">for</span> <span style="color: #0000ff;">connect</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #000000;">--</span> Looking <span style="color: #0000ff;">for</span> <span style="color: #0000ff;">connect</span> <span style="color: #000000;">-</span> found</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #000000;">--</span> Looking <span style="color: #0000ff;">for</span> <span style="color: #009900;">remove</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #000000;">--</span> Looking <span style="color: #0000ff;">for</span> <span style="color: #009900;">remove</span> <span style="color: #000000;">-</span> found</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #000000;">--</span> Looking <span style="color: #0000ff;">for</span> shmat</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #000000;">--</span> Looking <span style="color: #0000ff;">for</span> shmat <span style="color: #000000;">-</span> found</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #000000;">--</span> Looking <span style="color: #0000ff;">for</span> IceConnectionNumber in ICE</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #000000;">--</span> Looking <span style="color: #0000ff;">for</span> IceConnectionNumber in ICE <span style="color: #000000;">-</span> found</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #000000;">--</span> Looking <span style="color: #0000ff;">for</span> pthread.<span style="color: #009900;">h</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #000000;">--</span> Looking <span style="color: #0000ff;">for</span> pthread.<span style="color: #009900;">h</span> <span style="color: #000000;">-</span> found</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #000000;">--</span> Looking <span style="color: #0000ff;">for</span> pthread_create in pthreads</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #000000;">--</span> Looking <span style="color: #0000ff;">for</span> pthread_create in pthreads <span style="color: #000000;">-</span> not found</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #000000;">--</span> Looking <span style="color: #0000ff;">for</span> pthread_create in pthread</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #000000;">--</span> Looking <span style="color: #0000ff;">for</span> pthread_create in pthread <span style="color: #000000;">-</span> found</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">CMake Error<span style="color: #000000;">:</span> Attempt to add link library <span style="color: #666666;">&quot;-lpthread&quot;</span> to target <span style="color: #666666;">&quot;/usr/lib/libQtCore.so&quot;</span> which is not built by <span style="color: #009900;">this</span> project.</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #009900;">CMake</span> Error<span style="color: #000000;">:</span> Attempt to add link library <span style="color: #666666;">&quot;dl&quot;</span> to target <span style="color: #666666;">&quot;/usr/lib/libQtCore.so&quot;</span> which is not built by <span style="color: #009900;">this</span> project.</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #009900;">CMake</span> Error<span style="color: #000000;">:</span> Attempt to add link library <span style="color: #666666;">&quot;/usr/lib/libQtGui.so&quot;</span> to target <span style="color: #666666;">&quot;/usr/lib/libQtCore.so&quot;</span> which is not built by <span style="color: #009900;">this</span> project.</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #009900;">CMake</span> Error<span style="color: #000000;">:</span> Attempt to add link library <span style="color: #666666;">&quot;-lSM&quot;</span> to target <span style="color: #666666;">&quot;/usr/lib/libQtCore.so&quot;</span> which is not built by <span style="color: #009900;">this</span> project.</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #009900;">CMake</span> Error<span style="color: #000000;">:</span> Attempt to add link library <span style="color: #666666;">&quot;-lICE&quot;</span> to target <span style="color: #666666;">&quot;/usr/lib/libQtCore.so&quot;</span> which is not built by <span style="color: #009900;">this</span> project.</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #009900;">CMake</span> Error<span style="color: #000000;">:</span> Attempt to add link library <span style="color: #666666;">&quot;/usr/lib/libX11.so&quot;</span> to target <span style="color: #666666;">&quot;/usr/lib/libQtCore.so&quot;</span> which is not built by <span style="color: #009900;">this</span> project.</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #009900;">CMake</span> Error<span style="color: #000000;">:</span> Attempt to add link library <span style="color: #666666;">&quot;/usr/lib/libXext.so&quot;</span> to target <span style="color: #666666;">&quot;/usr/lib/libQtCore.so&quot;</span> which is not built by <span style="color: #009900;">this</span> project.</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #009900;">CMake</span> Error<span style="color: #000000;">:</span> Attempt to add link library <span style="color: #666666;">&quot;/usr/lib/libQtNetwork.so&quot;</span> to target <span style="color: #666666;">&quot;/usr/lib/libQtCore.so&quot;</span> which is not built by <span style="color: #009900;">this</span> project.</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #009900;">CMake</span> Error<span style="color: #000000;">:</span> Attempt to add link library <span style="color: #666666;">&quot;/usr/lib/libQtNetwork_debug.so&quot;</span> to target <span style="color: #666666;">&quot;/usr/lib/libQtCore.so&quot;</span> which is not built by <span style="color: #009900;">this</span> project.</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #009900;">CMake</span> Error<span style="color: #000000;">:</span> Attempt to add link library <span style="color: #666666;">&quot;/usr/lib/libQtXml.so&quot;</span> to target <span style="color: #666666;">&quot;/usr/lib/libQtCore.so&quot;</span> which is not built by <span style="color: #009900;">this</span> project.</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #009900;">CMake</span> Error<span style="color: #000000;">:</span> Attempt to add link library <span style="color: #666666;">&quot;/usr/lib/libQtXml_debug.so&quot;</span> to target <span style="color: #666666;">&quot;/usr/lib/libQtCore.so&quot;</span> which is not built by <span style="color: #009900;">this</span> project.</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #000000;">--</span> Configuring done</div></li></ol></pre></pre>
+        <pre class="bbcode_code" style="display:none;" id="5dc04ecfaffc471caddc714b0ae650c1_plain">-- Check for working C compiler: gcc
+-- Check for working C compiler: gcc -- works
+-- Check size of void*
+-- Check size of void* - done
+-- Check for working CXX compiler: c++
+-- Check for working CXX compiler: c++ -- works
+-- Looking for Q_WS_X11
+-- Looking for Q_WS_X11 - found
+-- Looking for Q_WS_MAC
+-- Looking for Q_WS_MAC - not found.
+-- Looking for Q_WS_WIN
+-- Looking for Q_WS_WIN - not found.
+-- Found Qt-Version 4.1.4
+-- Looking for XOpenDisplay in /usr/lib/libX11.so;/usr/lib/libXext.so
+-- Looking for XOpenDisplay in /usr/lib/libX11.so;/usr/lib/libXext.so - found
+-- Looking for gethostbyname
+-- Looking for gethostbyname - found
+-- Looking for connect
+-- Looking for connect - found
+-- Looking for remove
+-- Looking for remove - found
+-- Looking for shmat
+-- Looking for shmat - found
+-- Looking for IceConnectionNumber in ICE
+-- Looking for IceConnectionNumber in ICE - found
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+CMake Error: Attempt to add link library &quot;-lpthread&quot; to target &quot;/usr/lib/libQtCore.so&quot; which is not built by this project.
+CMake Error: Attempt to add link library &quot;dl&quot; to target &quot;/usr/lib/libQtCore.so&quot; which is not built by this project.
+CMake Error: Attempt to add link library &quot;/usr/lib/libQtGui.so&quot; to target &quot;/usr/lib/libQtCore.so&quot; which is not built by this project.
+CMake Error: Attempt to add link library &quot;-lSM&quot; to target &quot;/usr/lib/libQtCore.so&quot; which is not built by this project.
+CMake Error: Attempt to add link library &quot;-lICE&quot; to target &quot;/usr/lib/libQtCore.so&quot; which is not built by this project.
+CMake Error: Attempt to add link library &quot;/usr/lib/libX11.so&quot; to target &quot;/usr/lib/libQtCore.so&quot; which is not built by this project.
+CMake Error: Attempt to add link library &quot;/usr/lib/libXext.so&quot; to target &quot;/usr/lib/libQtCore.so&quot; which is not built by this project.
+CMake Error: Attempt to add link library &quot;/usr/lib/libQtNetwork.so&quot; to target &quot;/usr/lib/libQtCore.so&quot; which is not built by this project.
+CMake Error: Attempt to add link library &quot;/usr/lib/libQtNetwork_debug.so&quot; to target &quot;/usr/lib/libQtCore.so&quot; which is not built by this project.
+CMake Error: Attempt to add link library &quot;/usr/lib/libQtXml.so&quot; to target &quot;/usr/lib/libQtCore.so&quot; which is not built by this project.
+CMake Error: Attempt to add link library &quot;/usr/lib/libQtXml_debug.so&quot; to target &quot;/usr/lib/libQtCore.so&quot; which is not built by this project.
+-- Configuring done</pre>
+<div style="font-size:x-small; text-align:right; color: #aaa; "><em>To copy to clipboard, switch view to plain text mode&nbsp;</em></div>
+</div> <br />
+And the relevant section in CMakeFiles/CMakeError.log reads as follows:<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Qt Code:
+            <div style="width: 11em; float:right; text-align: right; font-size: x-small;">
+              <a onClick="document.getElementById('422cf388a7e0bf36536b7cce8ecd6b55_plain').style.display=document.getElementById('422cf388a7e0bf36536b7cce8ecd6b55_plain').style.display=='none' ? '' : 'none';document.getElementById('422cf388a7e0bf36536b7cce8ecd6b55_pretty').style.display=document.getElementById('422cf388a7e0bf36536b7cce8ecd6b55_pretty').style.display=='none' ? '' : 'none'">Switch view</a>
+            </div>
+        </div>
+	<pre class="bbcode_code" id="422cf388a7e0bf36536b7cce8ecd6b55_pretty"><pre class="qt" style="font-family:monospace;"><ol><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">Determining <span style="color: #0000ff;">if</span> the function pthread_create exists in the pthreads failed with the follow</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #000000;">/</span>usr<span style="color: #000000;">/</span>bin<span style="color: #000000;">/</span>gmake <span style="color: #000000;">-</span>f CMakeFiles<span style="color: #000000;">/</span>cmTryCompileExec.<span style="color: #009900;">dir</span><span style="color: #000000;">/</span>build.<span style="color: #009900;">make</span> CMakeFiles<span style="color: #000000;">/</span>cmTryCompileExec</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">gmake<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span><span style="color: #000000;">:</span> Entering directory `<span style="color: #000000;">/</span>home<span style="color: #000000;">/</span>indigojo<span style="color: #000000;">/</span>cvs<span style="color: #000000;">/</span><span style="color: #0000dd;">0.3</span><span style="color: #000000;">/</span>catkin<span style="color: #000000;">-</span>qtm<span style="color: #000000;">/</span>CMakeFiles<span style="color: #000000;">/</span>CMakeTmp<span style="color: #666666;">'</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #666666;">/usr/bin/cmake -E cmake_progress_report /home/indigojo/cvs/0.3/catkin-qtm/CMakeFiles/CMa</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #666666;">Building C object CMakeFiles/cmTryCompileExec.dir/usr/share/cmake/Modules/CheckFunctionE</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #666666;">/usr/bin/gcc  -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec.di</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #666666;">Linking C executable cmTryCompileExec</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #666666;">/usr/bin/cmake -P CMakeFiles/cmTryCompileExec.dir/cmake_clean_target.cmake</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #666666;">/usr/bin/gcc      -DCHECK_FUNCTION_EXISTS=pthread_create  -fPIC &quot;CMakeFiles/cmTryCompile</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #666666;">/usr/bin/ld: cannot find -lpthreads</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #666666;">collect2: ld returned 1 exit status</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #666666;">gmake[1]: *** [cmTryCompileExec] Error 1</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #666666;">gmake[1]: Leaving directory `/home/indigojo/cvs/0.3/catkin-qtm/CMakeFiles/CMakeTmp'</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">gmake<span style="color: #000000;">:</span> <span style="color: #000000;">***</span> <span style="color: #000000;">&#91;</span>cmTryCompileExec<span style="color: #000000;">/</span>fast<span style="color: #000000;">&#93;</span> Error <span style="color: #0000dd;">2</span></div></li></ol></pre></pre>
+        <pre class="bbcode_code" style="display:none;" id="422cf388a7e0bf36536b7cce8ecd6b55_plain">Determining if the function pthread_create exists in the pthreads failed with the follow
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec
+gmake&#91;1&#93;: Entering directory `/home/indigojo/cvs/0.3/catkin-qtm/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/indigojo/cvs/0.3/catkin-qtm/CMakeFiles/CMa
+Building C object CMakeFiles/cmTryCompileExec.dir/usr/share/cmake/Modules/CheckFunctionE
+/usr/bin/gcc  -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec.di
+Linking C executable cmTryCompileExec
+/usr/bin/cmake -P CMakeFiles/cmTryCompileExec.dir/cmake_clean_target.cmake
+/usr/bin/gcc      -DCHECK_FUNCTION_EXISTS=pthread_create  -fPIC &quot;CMakeFiles/cmTryCompile
+/usr/bin/ld: cannot find -lpthreads
+collect2: ld returned 1 exit status
+gmake&#91;1&#93;: *** &#91;cmTryCompileExec&#93; Error 1
+gmake&#91;1&#93;: Leaving directory `/home/indigojo/cvs/0.3/catkin-qtm/CMakeFiles/CMakeTmp'
+gmake: *** &#91;cmTryCompileExec/fast&#93; Error 2</pre>
+<div style="font-size:x-small; text-align:right; color: #aaa; "><em>To copy to clipboard, switch view to plain text mode&nbsp;</em></div>
+</div> <br />
+This is the first time I've actually written a CMakeLists.txt file and tried to run it, so I'm really quite new to the game, but I wanted to build an installable source bundle for my application.  Is the solution to this to suppress the attempt to use the non-existent pthreads library, and if so how?  If not, does anyone know what one does?
+				</blockquote>
+			</div>
+
+			
+
+
+		</div>
+			
+				
+			
+				 
+			
+			
+			
+		</div>
+	</div>
+	<div class="postfoot">
+		<div class="textcontrols floatcontainer">
+			<span class="postcontrols">
+				<img style="display:none" id="progress_19133" src="images/misc/progress.gif" alt="" />
+				
+				
+				
+					<a id="qrwq_19133" class="newreply" href="newreply.php?s=b1a8fe580091451a6747daffc2c78450&amp;do=newreply&amp;p=19133" rel="nofollow" title="Reply With Quote"><img id="quoteimg_19133" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+				
+				
+				
+			</span>
+			<span class="postlinking">
+				
+					
+				
+				
+
+				 
+				
+
+					
+
+					
+					 
+
+					
+					
+					
+					
+					
+			</span>
+		</div>
+	</div>
+	<hr />
+</li>
+<li class="postbit postbitim" id="post_thanks_box_19133" style="display:none">
+	
+</li> 
+<li class="postbit postbitim postcontainer old" id="post_19134">
+	<div class="postdetails_noavatar">
+		<div class="posthead">
+                        
+                                <span class="postdate old">
+                                        
+                                                <span class="date">3rd September 2006,&nbsp;<span class="time">20:41</span></span>
+                                        
+                                </span>
+                                <span class="nodecontrols">
+                                        
+                                                <a name="post19134" href="threads/3514-CMake-and-pthreads?s=b1a8fe580091451a6747daffc2c78450&amp;p=19134#post19134" class="postcounter">#2</a><a id="postcount19134" name="2"></a>
+                                        
+                                        
+                                        
+                                </span>
+                        
+		</div>
+
+		<div class="userinfo">
+			<div class="contact">
+				
+					<a class="postuseravatarlink" href="members/11-wysota?s=b1a8fe580091451a6747daffc2c78450" title="wysota is online now">
+						
+							<img src="image.php?s=b1a8fe580091451a6747daffc2c78450&amp;u=11&amp;dateline=1288868141" alt="wysota's Avatar" />
+						
+					</a>
+				
+				<div class="username_container">
+					
+						<div class="popupmenu memberaction">
+	<a class="username online popupctrl" href="members/11-wysota?s=b1a8fe580091451a6747daffc2c78450" title="wysota is online now"><strong>wysota</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<img src="images/site_icons/profile.png" alt="" />
+			<a href="members/11-wysota?s=b1a8fe580091451a6747daffc2c78450">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<img src="images/site_icons/forum.png" alt="" />
+			<a href="search.php?s=b1a8fe580091451a6747daffc2c78450&amp;do=finduser&amp;userid=11&amp;contenttype=vBForum_Post&amp;showposts=1" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		
+		
+		<li class="right">
+			<img src="images/site_icons/blog.png" alt="" />
+			<a href="blog.php?s=b1a8fe580091451a6747daffc2c78450&amp;u=11" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		<li class="left">
+			<img src="images/site_icons/homepage.png" alt="" />
+			<a href="http://blog.wysota.eu.org" rel="nofollow">
+				Visit Homepage
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<img src="images/site_icons/article.png" alt="" />
+			<a href="list.php/author/11-wysota" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+
+						<img class="inlineimg onlinestatus" src="images/statusicon/user-online.png" alt="wysota is online now" border="0" />
+
+					
+					<span class="usertitle">
+						Master of Zen
+					</span>
+					
+
+                                        
+					
+						<span class="postbit_reputation" id="repdisplay_19134_11" title="wysota has a reputation beyond repute">
+							
+								<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />
+							
+								<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />
+							
+								<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />
+							
+								<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />
+							
+								<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />
+							
+								<img class="repimg" src="images/reputation/reputation_highpos.png" alt="" />
+							
+								<img class="repimg" src="images/reputation/reputation_highpos.png" alt="" />
+							
+								<img class="repimg" src="images/reputation/reputation_highpos.png" alt="" />
+							
+								<img class="repimg" src="images/reputation/reputation_highpos.png" alt="" />
+							
+								<img class="repimg" src="images/reputation/reputation_highpos.png" alt="" />
+							
+								<img class="repimg" src="images/reputation/reputation_highpos.png" alt="" />
+							
+						</span>
+					
+					
+						<div class="imlinks">
+							    
+						</div>
+					
+				</div>
+<div class="username_container" style="margin-left: 5em;">
+
+      <a href="http://qt.nokia.com/developer/learning/certification"><img src="http://www.qtcentre.org/images/qtcentre/qt/Nokia_Certified_Qt_Developer_button.png" alt="Nokia Certified Qt Developer" /></a>
+     
+</div>
+			</div>
+			
+				<div class="userinfo_extra">
+					<dl class="userstats">
+						<dt>Join Date</dt> <dd>Jan 2006</dd>
+						<dt>Location</dt> <dd>Warsaw, Poland</dd>
+						
+						<dt>Posts</dt> <dd>27,824</dd>	
+						
+    
+	<dt>Thanks</dt> <dd>3</dd>
+    
+    
+	
+		<dd style="white-space:nowrap; display:inline; float: right;">Thanked 4,012 Times in 3,867 Posts</dd>
+	
+    
+
+  <dt>Qt products</dt>
+  <dd>
+    
+      <img style="height:12px;" src="images/qtcentre/logo16/qt3.png" title="Qt3" alt="Qt3" />
+    
+    
+      <img style="height:12px;" src="images/qtcentre/logo16/qt4.png" title="Qt4" alt="Qt4" />
+    
+    
+    
+      <img style="height:12px;" src="images/qtcentre/logo16/qpe.png" title="Qt/Embedded" alt="Qt/Embedded" />
+    
+    
+    
+    
+
+  </dd>
+
+  <dt>Platforms</dt>
+  <dd>
+    
+    
+      <img style="height:12px; margin-left: 2px;" src="images/qtcentre/logo16/x11.png" title="Unix/X11" alt="Unix/X11" />
+    
+    
+      <img style="height:12px; margin-left: 2px;" src="images/qtcentre/logo16/windows.png" title="Windows" alt="Windows" />
+    
+    
+    
+
+    
+      <img style="height:12px; margin-left: 2px;" src="images/qtcentre/logo16/maemo.png" title="Maemo" alt="Maemo" />
+    
+  </dd>
+<dt>Blog Entries</dt><dd><a href="blogs/11?s=b1a8fe580091451a6747daffc2c78450">4</a></dd>
+    <dt>Wiki edits</dt> <dd><a title="Wiki edits"  href="/wiki/Special:Contributions/wysota">9</a></dd>
+ 
+					</dl>
+					
+					
+				</div>
+			
+		</div>
+	</div>
+
+	<div class="postbody">
+		
+		<div class="postrow">
+		
+		<h2 class="posttitle icon">
+			<img src="images/icons/icon1.png" alt="Default" /> Re: CMake and pthreads
+		</h2>
+		
+				
+				
+		<div class="content">
+			<div id="post_message_19134">
+				<blockquote class="postcontent restore">
+					AFAIK Qt requires pthreads, so it won't be possible to proceed without it.
+				</blockquote>
+			</div>
+
+			
+
+
+		</div>
+			
+				
+			
+			
+			
+		</div>
+	</div>
+	<div class="postfoot">
+		<div class="textcontrols floatcontainer">
+			<span class="postcontrols">
+				<img style="display:none" id="progress_19134" src="images/misc/progress.gif" alt="" />
+				
+				
+				
+					<a id="qrwq_19134" class="newreply" href="newreply.php?s=b1a8fe580091451a6747daffc2c78450&amp;do=newreply&amp;p=19134" rel="nofollow" title="Reply With Quote"><img id="quoteimg_19134" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+				
+				
+				
+			</span>
+			<span class="postlinking">
+				
+					
+				
+				
+
+				 
+				
+
+					
+
+					
+					 
+
+					
+					
+					
+					
+					
+			</span>
+		</div>
+	</div>
+	<hr />
+</li>
+<li class="postbit postbitim" id="post_thanks_box_19134" style="display:none">
+	
+</li> 
+<li class="postbit postbitim postcontainer old" id="post_19135">
+	<div class="postdetails_noavatar">
+		<div class="posthead">
+                        
+                                <span class="postdate old">
+                                        
+                                                <span class="date">3rd September 2006,&nbsp;<span class="time">20:46</span></span>
+                                        
+                                </span>
+                                <span class="nodecontrols">
+                                        
+                                                <a name="post19135" href="threads/3514-CMake-and-pthreads?s=b1a8fe580091451a6747daffc2c78450&amp;p=19135#post19135" class="postcounter">#3</a><a id="postcount19135" name="3"></a>
+                                        
+                                        
+                                        
+                                </span>
+                        
+		</div>
+
+		<div class="userinfo_noavatar">
+			<div class="contact">
+				
+				<div class="username_container">
+					
+						<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="members/144-Matt-Smith?s=b1a8fe580091451a6747daffc2c78450" title="Matt Smith is offline"><strong>Matt Smith</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<img src="images/site_icons/profile.png" alt="" />
+			<a href="members/144-Matt-Smith?s=b1a8fe580091451a6747daffc2c78450">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<img src="images/site_icons/forum.png" alt="" />
+			<a href="search.php?s=b1a8fe580091451a6747daffc2c78450&amp;do=finduser&amp;userid=144&amp;contenttype=vBForum_Post&amp;showposts=1" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		
+		
+		<li class="right">
+			<img src="images/site_icons/blog.png" alt="" />
+			<a href="blog.php?s=b1a8fe580091451a6747daffc2c78450&amp;u=144" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		<li class="left">
+			<img src="images/site_icons/homepage.png" alt="" />
+			<a href="http://www.blogistan.co.uk/qt/" rel="nofollow">
+				Visit Homepage
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<img src="images/site_icons/article.png" alt="" />
+			<a href="list.php/author/144-Matt Smith" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+
+						<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="Matt Smith is offline" border="0" />
+
+					
+					<span class="usertitle">
+						Novice
+					</span>
+					
+
+                                        
+					
+						<span class="postbit_reputation" id="repdisplay_19135_144" title="Matt Smith is on a distinguished road">
+							
+								<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />
+							
+						</span>
+					
+					
+						<div class="imlinks">
+							    
+						</div>
+					
+				</div>
+<div class="username_container" style="margin-left: 5em;">
+ 
+</div>
+			</div>
+			
+				<div class="userinfo_extra">
+					<dl class="userstats">
+						<dt>Join Date</dt> <dd>Jan 2006</dd>
+						<dt>Location</dt> <dd>New Malden (near London)</dd>
+						
+						<dt>Posts</dt> <dd>32</dd>	
+						
+    
+	<dt>Thanks</dt> <dd>3</dd>
+    
+    
+	
+		<dd style="white-space:nowrap; display:inline; float: right;">Thanked 2 Times in 2 Posts</dd>
+	
+    
+
+  <dt>Qt products</dt>
+  <dd>
+    
+      <img style="height:12px;" src="images/qtcentre/logo16/qt3.png" title="Qt3" alt="Qt3" />
+    
+    
+      <img style="height:12px;" src="images/qtcentre/logo16/qt4.png" title="Qt4" alt="Qt4" />
+    
+    
+    
+    
+    
+    
+
+  </dd>
+
+  <dt>Platforms</dt>
+  <dd>
+    
+      <img style="height:12px; margin-left: 2px;" src="images/qtcentre/logo16/macosx.png" title="MacOS X" alt="MacOS X" />
+    
+    
+      <img style="height:12px; margin-left: 2px;" src="images/qtcentre/logo16/x11.png" title="Unix/X11" alt="Unix/X11" />
+    
+    
+    
+    
+
+    
+  </dd>
+ 
+					</dl>
+					
+					
+				</div>
+			
+		</div>
+	</div>
+
+	<div class="postbody">
+		
+		<div class="postrow">
+		
+		<h2 class="posttitle icon">
+			<img src="images/icons/icon1.png" alt="Default" /> Re: CMake and pthreads
+		</h2>
+		
+				
+				
+		<div class="content">
+			<div id="post_message_19135">
+				<blockquote class="postcontent restore">
+					<div class="bbcode_container">
+	<div class="bbcode_quote">
+		<div class="quote_container">
+			<div class="bbcode_quote_container"></div>
+			
+				<div class="bbcode_postedby">
+					<img src="images/misc/quote_icon.png" alt="Quote" /> Originally Posted by <strong>wysota</strong>
+					
+				</div>
+				<div class="message">AFAIK Qt requires pthreads, so it won't be possible to proceed without it.</div>
+			
+		</div>
+	</div>
+</div>I've been using QMake since the start, and the resulting binary has used -lpthread (no s on the end) and works fine.
+				</blockquote>
+			</div>
+
+			
+
+
+		</div>
+			
+				
+			
+			
+			
+		</div>
+	</div>
+	<div class="postfoot">
+		<div class="textcontrols floatcontainer">
+			<span class="postcontrols">
+				<img style="display:none" id="progress_19135" src="images/misc/progress.gif" alt="" />
+				
+				
+				
+					<a id="qrwq_19135" class="newreply" href="newreply.php?s=b1a8fe580091451a6747daffc2c78450&amp;do=newreply&amp;p=19135" rel="nofollow" title="Reply With Quote"><img id="quoteimg_19135" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+				
+				
+				
+			</span>
+			<span class="postlinking">
+				
+					
+				
+				
+
+				 
+				
+
+					
+
+					
+					 
+
+					
+					
+					
+					
+					
+			</span>
+		</div>
+	</div>
+	<hr />
+</li>
+<li class="postbit postbitim" id="post_thanks_box_19135" style="display:none">
+	
+</li> 
+<li class="postbit postbitim postcontainer old" id="post_19136">
+	<div class="postdetails_noavatar">
+		<div class="posthead">
+                        
+                                <span class="postdate old">
+                                        
+                                                <span class="date">3rd September 2006,&nbsp;<span class="time">20:57</span></span>
+                                        
+                                </span>
+                                <span class="nodecontrols">
+                                        
+                                                <a name="post19136" href="threads/3514-CMake-and-pthreads?s=b1a8fe580091451a6747daffc2c78450&amp;p=19136#post19136" class="postcounter">#4</a><a id="postcount19136" name="4"></a>
+                                        
+                                        
+                                        
+                                </span>
+                        
+		</div>
+
+		<div class="userinfo_noavatar">
+			<div class="contact">
+				
+				<div class="username_container">
+					
+						<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="members/7-jacek?s=b1a8fe580091451a6747daffc2c78450" title="jacek is offline"><strong>jacek</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<img src="images/site_icons/profile.png" alt="" />
+			<a href="members/7-jacek?s=b1a8fe580091451a6747daffc2c78450">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<img src="images/site_icons/forum.png" alt="" />
+			<a href="search.php?s=b1a8fe580091451a6747daffc2c78450&amp;do=finduser&amp;userid=7&amp;contenttype=vBForum_Post&amp;showposts=1" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		
+		
+		<li class="right">
+			<img src="images/site_icons/blog.png" alt="" />
+			<a href="blog.php?s=b1a8fe580091451a6747daffc2c78450&amp;u=7" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="right">
+			<img src="images/site_icons/article.png" alt="" />
+			<a href="list.php/author/7-jacek" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+
+						<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="jacek is offline" border="0" />
+
+					
+					<span class="usertitle">
+						Guru
+					</span>
+					
+
+                                        
+					
+						<span class="postbit_reputation" id="repdisplay_19136_7" title="jacek will become famous soon enough">
+							
+								<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />
+							
+						</span>
+					
+					
+						<div class="imlinks">
+							    
+						</div>
+					
+				</div>
+<div class="username_container" style="margin-left: 5em;">
+ 
+</div>
+			</div>
+			
+				<div class="userinfo_extra">
+					<dl class="userstats">
+						<dt>Join Date</dt> <dd>Jan 2006</dd>
+						<dt>Location</dt> <dd>Warsaw, Poland</dd>
+						
+						<dt>Posts</dt> <dd>5,369</dd>	
+						
+    
+	<dt>Thanks</dt> <dd>28</dd>
+    
+    
+	
+		<dd style="white-space:nowrap; display:inline; float: right;">Thanked 964 Times in 906 Posts</dd>
+	
+    
+
+  <dt>Qt products</dt>
+  <dd>
+    
+      <img style="height:12px;" src="images/qtcentre/logo16/qt3.png" title="Qt3" alt="Qt3" />
+    
+    
+      <img style="height:12px;" src="images/qtcentre/logo16/qt4.png" title="Qt4" alt="Qt4" />
+    
+    
+    
+    
+    
+    
+
+  </dd>
+
+  <dt>Platforms</dt>
+  <dd>
+    
+    
+      <img style="height:12px; margin-left: 2px;" src="images/qtcentre/logo16/x11.png" title="Unix/X11" alt="Unix/X11" />
+    
+    
+      <img style="height:12px; margin-left: 2px;" src="images/qtcentre/logo16/windows.png" title="Windows" alt="Windows" />
+    
+    
+    
+
+    
+  </dd>
+ 
+					</dl>
+					
+					
+				</div>
+			
+		</div>
+	</div>
+
+	<div class="postbody">
+		
+		<div class="postrow">
+		
+		<h2 class="posttitle icon">
+			<img src="images/icons/icon1.png" alt="Default" /> Re: CMake and pthreads
+		</h2>
+		
+				
+				
+		<div class="content">
+			<div id="post_message_19136">
+				<blockquote class="postcontent restore">
+					<div class="bbcode_container">
+	<div class="bbcode_quote">
+		<div class="quote_container">
+			<div class="bbcode_quote_container"></div>
+			
+				<div class="bbcode_postedby">
+					<img src="images/misc/quote_icon.png" alt="Quote" /> Originally Posted by <strong>Matt Smith</strong>
+					
+				</div>
+				<div class="message">-- Looking for pthread_create in pthreads - not found<br />
+-- Looking for pthread_create in pthread - found</div>
+			
+		</div>
+	</div>
+</div>There's nothing wrong here. It didn't find the function it was looking for in libpthreads, so it used libpthread instead.<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_quote">
+		<div class="quote_container">
+			<div class="bbcode_quote_container"></div>
+			
+				<div class="bbcode_postedby">
+					<img src="images/misc/quote_icon.png" alt="Quote" /> Originally Posted by <strong>Matt Smith</strong>
+					
+				</div>
+				<div class="message">CMake Error: Attempt to add link library &quot;-lpthread&quot; to target &quot;/usr/lib/libQtCore.so&quot; which is not built by this project.</div>
+			
+		</div>
+	</div>
+</div>How does your TARGET_LINK_LIBRARIES line look like?
+				</blockquote>
+			</div>
+
+			
+
+
+		</div>
+			
+			<!-- edit note -->
+			<blockquote class="postcontent lastedited">
+				
+					Last edited by jacek; 3rd September 2006 at <span class="time">21:24</span>.
+				
+				
+					<span class="reason">Reason:</span> typo
+				
+			</blockquote>
+			<!-- / edit note -->
+			
+				
+			
+			
+			
+		</div>
+	</div>
+	<div class="postfoot">
+		<div class="textcontrols floatcontainer">
+			<span class="postcontrols">
+				<img style="display:none" id="progress_19136" src="images/misc/progress.gif" alt="" />
+				
+				
+				
+					<a id="qrwq_19136" class="newreply" href="newreply.php?s=b1a8fe580091451a6747daffc2c78450&amp;do=newreply&amp;p=19136" rel="nofollow" title="Reply With Quote"><img id="quoteimg_19136" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+				
+				
+				
+			</span>
+			<span class="postlinking">
+				
+					
+				
+				
+
+				 
+				
+
+					
+
+					
+					 
+
+					
+					
+					
+					
+					
+			</span>
+		</div>
+	</div>
+	<hr />
+</li>
+<li class="postbit postbitim" id="post_thanks_box_19136" style="display:none">
+	
+</li> 
+<li class="postbit postbitim postcontainer old" id="post_19137">
+	<div class="postdetails_noavatar">
+		<div class="posthead">
+                        
+                                <span class="postdate old">
+                                        
+                                                <span class="date">3rd September 2006,&nbsp;<span class="time">21:32</span></span>
+                                        
+                                </span>
+                                <span class="nodecontrols">
+                                        
+                                                <a name="post19137" href="threads/3514-CMake-and-pthreads?s=b1a8fe580091451a6747daffc2c78450&amp;p=19137#post19137" class="postcounter">#5</a><a id="postcount19137" name="5"></a>
+                                        
+                                        
+                                        
+                                </span>
+                        
+		</div>
+
+		<div class="userinfo_noavatar">
+			<div class="contact">
+				
+				<div class="username_container">
+					
+						<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="members/144-Matt-Smith?s=b1a8fe580091451a6747daffc2c78450" title="Matt Smith is offline"><strong>Matt Smith</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<img src="images/site_icons/profile.png" alt="" />
+			<a href="members/144-Matt-Smith?s=b1a8fe580091451a6747daffc2c78450">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<img src="images/site_icons/forum.png" alt="" />
+			<a href="search.php?s=b1a8fe580091451a6747daffc2c78450&amp;do=finduser&amp;userid=144&amp;contenttype=vBForum_Post&amp;showposts=1" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		
+		
+		<li class="right">
+			<img src="images/site_icons/blog.png" alt="" />
+			<a href="blog.php?s=b1a8fe580091451a6747daffc2c78450&amp;u=144" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		<li class="left">
+			<img src="images/site_icons/homepage.png" alt="" />
+			<a href="http://www.blogistan.co.uk/qt/" rel="nofollow">
+				Visit Homepage
+			</a>
+		</li>
+		
+		
+		
+		<li class="right">
+			<img src="images/site_icons/article.png" alt="" />
+			<a href="list.php/author/144-Matt Smith" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+
+						<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="Matt Smith is offline" border="0" />
+
+					
+					<span class="usertitle">
+						Novice
+					</span>
+					
+
+                                        
+					
+						<span class="postbit_reputation" id="repdisplay_19137_144" title="Matt Smith is on a distinguished road">
+							
+								<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />
+							
+						</span>
+					
+					
+						<div class="imlinks">
+							    
+						</div>
+					
+				</div>
+<div class="username_container" style="margin-left: 5em;">
+ 
+</div>
+			</div>
+			
+				<div class="userinfo_extra">
+					<dl class="userstats">
+						<dt>Join Date</dt> <dd>Jan 2006</dd>
+						<dt>Location</dt> <dd>New Malden (near London)</dd>
+						
+						<dt>Posts</dt> <dd>32</dd>	
+						
+    
+	<dt>Thanks</dt> <dd>3</dd>
+    
+    
+	
+		<dd style="white-space:nowrap; display:inline; float: right;">Thanked 2 Times in 2 Posts</dd>
+	
+    
+
+  <dt>Qt products</dt>
+  <dd>
+    
+      <img style="height:12px;" src="images/qtcentre/logo16/qt3.png" title="Qt3" alt="Qt3" />
+    
+    
+      <img style="height:12px;" src="images/qtcentre/logo16/qt4.png" title="Qt4" alt="Qt4" />
+    
+    
+    
+    
+    
+    
+
+  </dd>
+
+  <dt>Platforms</dt>
+  <dd>
+    
+      <img style="height:12px; margin-left: 2px;" src="images/qtcentre/logo16/macosx.png" title="MacOS X" alt="MacOS X" />
+    
+    
+      <img style="height:12px; margin-left: 2px;" src="images/qtcentre/logo16/x11.png" title="Unix/X11" alt="Unix/X11" />
+    
+    
+    
+    
+
+    
+  </dd>
+ 
+					</dl>
+					
+					
+				</div>
+			
+		</div>
+	</div>
+
+	<div class="postbody">
+		
+		<div class="postrow">
+		
+		<h2 class="posttitle icon">
+			<img src="images/icons/icon1.png" alt="Default" /> Re: CMake and pthreads
+		</h2>
+		
+				
+				
+		<div class="content">
+			<div id="post_message_19137">
+				<blockquote class="postcontent restore">
+					<div class="bbcode_container">
+	<div class="bbcode_quote">
+		<div class="quote_container">
+			<div class="bbcode_quote_container"></div>
+			
+				<div class="bbcode_postedby">
+					<img src="images/misc/quote_icon.png" alt="Quote" /> Originally Posted by <strong>jacek</strong>
+					
+				</div>
+				<div class="message">There's nothing wrong here. It didn't find the function it was looking for in libpthreads, so it used libpthread instead.<br />
+<br />
+<br />
+How does your TARGET_LINK_LIBRARIES line look like?</div>
+			
+		</div>
+	</div>
+</div>Like this:<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Qt Code:
+            <div style="width: 11em; float:right; text-align: right; font-size: x-small;">
+              <a onClick="document.getElementById('f6ec3f3499a61d3cf8fbbe1f7f1548a0_plain').style.display=document.getElementById('f6ec3f3499a61d3cf8fbbe1f7f1548a0_plain').style.display=='none' ? '' : 'none';document.getElementById('f6ec3f3499a61d3cf8fbbe1f7f1548a0_pretty').style.display=document.getElementById('f6ec3f3499a61d3cf8fbbe1f7f1548a0_pretty').style.display=='none' ? '' : 'none'">Switch view</a>
+            </div>
+        </div>
+	<pre class="bbcode_code" id="f6ec3f3499a61d3cf8fbbe1f7f1548a0_pretty"><pre class="qt" style="font-family:monospace;"><ol><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">TARGET_LINK_LIBRARIES<span style="color: #000000;">&#40;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">    $<span style="color: #000000;">&#123;</span>QT_LIBRARIES<span style="color: #000000;">&#125;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">    $<span style="color: #000000;">&#123;</span>QT_QTNETWORK_LIBRARIES<span style="color: #000000;">&#125;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">    $<span style="color: #000000;">&#123;</span>QT_QTXML_LIBRARIES<span style="color: #000000;">&#125;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #000000;">&#41;</span></div></li></ol></pre></pre>
+        <pre class="bbcode_code" style="display:none;" id="f6ec3f3499a61d3cf8fbbe1f7f1548a0_plain">TARGET_LINK_LIBRARIES(
+    ${QT_LIBRARIES}
+    ${QT_QTNETWORK_LIBRARIES}
+    ${QT_QTXML_LIBRARIES}
+)</pre>
+<div style="font-size:x-small; text-align:right; color: #aaa; "><em>To copy to clipboard, switch view to plain text mode&nbsp;</em></div>
+</div> 
+				</blockquote>
+			</div>
+
+			
+
+
+		</div>
+			
+				
+			
+			
+			
+		</div>
+	</div>
+	<div class="postfoot">
+		<div class="textcontrols floatcontainer">
+			<span class="postcontrols">
+				<img style="display:none" id="progress_19137" src="images/misc/progress.gif" alt="" />
+				
+				
+				
+					<a id="qrwq_19137" class="newreply" href="newreply.php?s=b1a8fe580091451a6747daffc2c78450&amp;do=newreply&amp;p=19137" rel="nofollow" title="Reply With Quote"><img id="quoteimg_19137" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+				
+				
+				
+			</span>
+			<span class="postlinking">
+				
+					
+				
+				
+
+				 
+				
+
+					
+
+					
+					 
+
+					
+					
+					
+					
+					
+			</span>
+		</div>
+	</div>
+	<hr />
+</li>
+<li class="postbit postbitim" id="post_thanks_box_19137" style="display:none">
+	
+</li> 
+<li class="postbit postbitim postcontainer old" id="post_19138">
+	<div class="postdetails_noavatar">
+		<div class="posthead">
+                        
+                                <span class="postdate old">
+                                        
+                                                <span class="date">3rd September 2006,&nbsp;<span class="time">21:42</span></span>
+                                        
+                                </span>
+                                <span class="nodecontrols">
+                                        
+                                                <a name="post19138" href="threads/3514-CMake-and-pthreads?s=b1a8fe580091451a6747daffc2c78450&amp;p=19138#post19138" class="postcounter">#6</a><a id="postcount19138" name="6"></a>
+                                        
+                                        
+                                        
+                                </span>
+                        
+		</div>
+
+		<div class="userinfo_noavatar">
+			<div class="contact">
+				
+				<div class="username_container">
+					
+						<div class="popupmenu memberaction">
+	<a class="username offline popupctrl" href="members/7-jacek?s=b1a8fe580091451a6747daffc2c78450" title="jacek is offline"><strong>jacek</strong></a>
+	<ul class="popupbody popuphover memberaction_body">
+		<li class="left">
+			<img src="images/site_icons/profile.png" alt="" />
+			<a href="members/7-jacek?s=b1a8fe580091451a6747daffc2c78450">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<img src="images/site_icons/forum.png" alt="" />
+			<a href="search.php?s=b1a8fe580091451a6747daffc2c78450&amp;do=finduser&amp;userid=7&amp;contenttype=vBForum_Post&amp;showposts=1" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		
+		
+		<li class="right">
+			<img src="images/site_icons/blog.png" alt="" />
+			<a href="blog.php?s=b1a8fe580091451a6747daffc2c78450&amp;u=7" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="right">
+			<img src="images/site_icons/article.png" alt="" />
+			<a href="list.php/author/7-jacek" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+
+						<img class="inlineimg onlinestatus" src="images/statusicon/user-offline.png" alt="jacek is offline" border="0" />
+
+					
+					<span class="usertitle">
+						Guru
+					</span>
+					
+
+                                        
+					
+						<span class="postbit_reputation" id="repdisplay_19138_7" title="jacek will become famous soon enough">
+							
+								<img class="repimg" src="images/reputation/reputation_pos.png" alt="" />
+							
+						</span>
+					
+					
+						<div class="imlinks">
+							    
+						</div>
+					
+				</div>
+<div class="username_container" style="margin-left: 5em;">
+ 
+</div>
+			</div>
+			
+				<div class="userinfo_extra">
+					<dl class="userstats">
+						<dt>Join Date</dt> <dd>Jan 2006</dd>
+						<dt>Location</dt> <dd>Warsaw, Poland</dd>
+						
+						<dt>Posts</dt> <dd>5,369</dd>	
+						
+    
+	<dt>Thanks</dt> <dd>28</dd>
+    
+    
+	
+		<dd style="white-space:nowrap; display:inline; float: right;">Thanked 964 Times in 906 Posts</dd>
+	
+    
+
+  <dt>Qt products</dt>
+  <dd>
+    
+      <img style="height:12px;" src="images/qtcentre/logo16/qt3.png" title="Qt3" alt="Qt3" />
+    
+    
+      <img style="height:12px;" src="images/qtcentre/logo16/qt4.png" title="Qt4" alt="Qt4" />
+    
+    
+    
+    
+    
+    
+
+  </dd>
+
+  <dt>Platforms</dt>
+  <dd>
+    
+    
+      <img style="height:12px; margin-left: 2px;" src="images/qtcentre/logo16/x11.png" title="Unix/X11" alt="Unix/X11" />
+    
+    
+      <img style="height:12px; margin-left: 2px;" src="images/qtcentre/logo16/windows.png" title="Windows" alt="Windows" />
+    
+    
+    
+
+    
+  </dd>
+ 
+					</dl>
+					
+					
+				</div>
+			
+		</div>
+	</div>
+
+	<div class="postbody">
+		
+		<div class="postrow">
+		
+		<h2 class="posttitle icon">
+			<img src="images/icons/icon1.png" alt="Default" /> Re: CMake and pthreads
+		</h2>
+		
+				
+				
+					
+				
+		<div class="content">
+			<div id="post_message_19138">
+				<blockquote class="postcontent restore">
+					It should be:<div class="bbcode_container">
+	<div class="bbcode_description">Qt Code:
+            <div style="width: 11em; float:right; text-align: right; font-size: x-small;">
+              <a onClick="document.getElementById('04af4b0f9154f69b0a714ed2a4966034_plain').style.display=document.getElementById('04af4b0f9154f69b0a714ed2a4966034_plain').style.display=='none' ? '' : 'none';document.getElementById('04af4b0f9154f69b0a714ed2a4966034_pretty').style.display=document.getElementById('04af4b0f9154f69b0a714ed2a4966034_pretty').style.display=='none' ? '' : 'none'">Switch view</a>
+            </div>
+        </div>
+	<pre class="bbcode_code" id="04af4b0f9154f69b0a714ed2a4966034_pretty"><pre class="qt" style="font-family:monospace;"><ol><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">TARGET_LINK_LIBRARIES<span style="color: #000000;">&#40;</span> program_name $<span style="color: #000000;">&#123;</span>QT_LIBRARIES<span style="color: #000000;">&#125;</span> <span style="color: #000000;">&#41;</span></div></li></ol></pre></pre>
+        <pre class="bbcode_code" style="display:none;" id="04af4b0f9154f69b0a714ed2a4966034_plain">TARGET_LINK_LIBRARIES( program_name ${QT_LIBRARIES} )</pre>
+<div style="font-size:x-small; text-align:right; color: #aaa; "><em>To copy to clipboard, switch view to plain text mode&nbsp;</em></div>
+</div> and add <br />
+<div class="bbcode_container">
+	<div class="bbcode_description">Qt Code:
+            <div style="width: 11em; float:right; text-align: right; font-size: x-small;">
+              <a onClick="document.getElementById('78112825445a3283cdf9f563765c7cad_plain').style.display=document.getElementById('78112825445a3283cdf9f563765c7cad_plain').style.display=='none' ? '' : 'none';document.getElementById('78112825445a3283cdf9f563765c7cad_pretty').style.display=document.getElementById('78112825445a3283cdf9f563765c7cad_pretty').style.display=='none' ? '' : 'none'">Switch view</a>
+            </div>
+        </div>
+	<pre class="bbcode_code" id="78112825445a3283cdf9f563765c7cad_pretty"><pre class="qt" style="font-family:monospace;"><ol><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">SET<span style="color: #000000;">&#40;</span> QT_USE_QTNETWORK <span style="color: #0000ff;">TRUE</span> <span style="color: #000000;">&#41;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">SET<span style="color: #000000;">&#40;</span> QT_USE_QTXML <span style="color: #0000ff;">TRUE</span> <span style="color: #000000;">&#41;</span></div></li></ol></pre></pre>
+        <pre class="bbcode_code" style="display:none;" id="78112825445a3283cdf9f563765c7cad_plain">SET( QT_USE_QTNETWORK TRUE )
+SET( QT_USE_QTXML TRUE )</pre>
+<div style="font-size:x-small; text-align:right; color: #aaa; "><em>To copy to clipboard, switch view to plain text mode&nbsp;</em></div>
+</div>  before FIND_PACKAGE().<br />
+<br />
+<a class="bbcodeurl" href="http://wiki.qtcentre.org/index.php?title=Compiling_Qt4_apps_with_CMake" target="_blank">http://wiki.qtcentre.org/index.php?t...pps_with_CMake</a>
+				</blockquote>
+			</div>
+
+			
+
+
+		</div>
+			
+				
+			
+			
+			
+		</div>
+	</div>
+	<div class="postfoot">
+		<div class="textcontrols floatcontainer">
+			<span class="postcontrols">
+				<img style="display:none" id="progress_19138" src="images/misc/progress.gif" alt="" />
+				
+				
+				
+					<a id="qrwq_19138" class="newreply" href="newreply.php?s=b1a8fe580091451a6747daffc2c78450&amp;do=newreply&amp;p=19138" rel="nofollow" title="Reply With Quote"><img id="quoteimg_19138" src="clear.gif" alt="Reply With Quote" />  Reply With Quote</a> 
+				
+				
+				
+			</span>
+			<span class="postlinking">
+				
+					
+				
+				
+
+				 
+				
+
+					
+
+					
+					 
+
+					
+					
+					
+					
+					
+			</span>
+		</div>
+	</div>
+	<hr />
+</li>
+<li class="postbit postbitim" id="post_thanks_box_19138">
+	<div class="postbody">
+	<div class="postrow">
+	
+	<h2 class="posttitle">
+		
+			The following user says thank you to jacek for this useful post:
+		
+	</h2>
+	<div class="content">
+		<div id="post_thanks_bit_19138">
+			<blockquote class="postcontent restore">
+				<a href="member.php?s=b1a8fe580091451a6747daffc2c78450&amp;u=144" rel="nofollow">Matt Smith</a>&nbsp;(3rd September 2006) 
+			</blockquote>
+		</div>
+	</div>
+	</div>
+</div>
+<hr /> 
+</li> 
+		</ol>
+		<div class="separator"></div>
+		<div class="postlistfoot">
+			
+		</div>
+
+	
+
+</div>
+
+<div id="below_postlist" class="noinlinemod below_postlist">
+	
+		<a href="newreply.php?s=b1a8fe580091451a6747daffc2c78450&amp;p=19138&amp;noquote=1"class="newcontent_textcontrol" id="newreplylink_bottom"><span>+</span> Reply to Thread</a>
+	
+	<div id="pagination_bottom" class="pagination_bottom">
+	
+		<div class="clear"></div>
+<div class="navpopupmenu popupmenu nohovermenu" id="showthread_navpopup">
+	
+		<span class="shade">Quick Navigation</span>
+		<a href="threads/3514-CMake-and-pthreads?s=b1a8fe580091451a6747daffc2c78450" class="popupctrl"><span class="ctrlcontainer">General Discussion</span></a>
+		<a href="threads/3514-CMake-and-pthreads#top" class="textcontrol" onclick="document.location.hash='top';return false;">Top</a>
+	
+	<ul class="navpopupbody popupbody popuphover">
+		
+		<li class="optionlabel">Site Areas</li>
+		<li><a href="usercp.php?s=b1a8fe580091451a6747daffc2c78450">Settings</a></li>
+		<li><a href="private.php?s=b1a8fe580091451a6747daffc2c78450">Private Messages</a></li>
+		<li><a href="subscription.php?s=b1a8fe580091451a6747daffc2c78450">Subscriptions</a></li>
+		<li><a href="online.php?s=b1a8fe580091451a6747daffc2c78450">Who's Online</a></li>
+		<li><a href="search.php?s=b1a8fe580091451a6747daffc2c78450">Search Forums</a></li>
+		<li><a href="forum.php?s=b1a8fe580091451a6747daffc2c78450">Forums Home</a></li>
+		
+			<li class="optionlabel">Forums</li>
+			
+		
+			
+				<li><a href="forums/1-Qt?s=b1a8fe580091451a6747daffc2c78450">Qt</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forums/4-Newbie?s=b1a8fe580091451a6747daffc2c78450">Newbie</a></li>
+			
+		
+			
+				<li><a href="forums/2-Qt-Programming?s=b1a8fe580091451a6747daffc2c78450">Qt Programming</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="forums/23-Qwt?s=b1a8fe580091451a6747daffc2c78450">Qwt</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forums/42-Qt-Quick?s=b1a8fe580091451a6747daffc2c78450">Qt Quick</a></li>
+			
+		
+			
+				<li><a href="forums/3-Qt-Tools?s=b1a8fe580091451a6747daffc2c78450">Qt Tools</a></li>
+			
+		
+			
+				<li><a href="forums/16-Qt-based-Software?s=b1a8fe580091451a6747daffc2c78450">Qt-based Software</a></li>
+			
+		
+			
+				<li><a href="forums/14-Qt-for-Embedded-and-Mobile?s=b1a8fe580091451a6747daffc2c78450">Qt for Embedded and Mobile</a></li>
+			
+		
+			
+				<li><a href="forums/5-Installation-and-Deployment?s=b1a8fe580091451a6747daffc2c78450">Installation and Deployment</a></li>
+			
+		
+			
+				<li><a href="forums/41-Wiki?s=b1a8fe580091451a6747daffc2c78450">Wiki</a></li>
+			
+		
+			
+				<li><a href="forums/7-KDE-Forum?s=b1a8fe580091451a6747daffc2c78450">KDE Forum</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forums/8-Other?s=b1a8fe580091451a6747daffc2c78450">Other</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forums/9-General-Programming?s=b1a8fe580091451a6747daffc2c78450">General Programming</a></li>
+			
+		
+			
+				<li><a href="forums/25-ICSNetwork?s=b1a8fe580091451a6747daffc2c78450">ICSNetwork</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="forums/26-Introduction-to-Qt?s=b1a8fe580091451a6747daffc2c78450">Introduction to Qt</a></li>
+			
+		
+			
+				<li><a href="forums/30-An-Introduction-to-QThreads?s=b1a8fe580091451a6747daffc2c78450">An Introduction to QThreads</a></li>
+			
+		
+			
+				<li><a href="forums/31-The-GraphicsView-Framework?s=b1a8fe580091451a6747daffc2c78450">The GraphicsView Framework</a></li>
+			
+		
+			
+				<li><a href="forums/32-What-s-New-in-Qt-4-4?s=b1a8fe580091451a6747daffc2c78450">What's New in Qt 4.4</a></li>
+			
+		
+			
+				<li><a href="forums/33-Design-Patterns-in-Qt?s=b1a8fe580091451a6747daffc2c78450">Design Patterns in Qt</a></li>
+			
+		
+			
+				<li><a href="forums/34-The-Model-View-Framework?s=b1a8fe580091451a6747daffc2c78450">The Model-View Framework</a></li>
+			
+		
+			
+				<li><a href="forums/35-Best-Practices-in-Qt-Programming?s=b1a8fe580091451a6747daffc2c78450">Best Practices in Qt Programming</a></li>
+			
+		
+			
+				<li><a href="forums/36-Qt-Webkit?s=b1a8fe580091451a6747daffc2c78450">Qt Webkit</a></li>
+			
+		
+			
+				<li><a href="forums/37-Best-Practices-for-Qt-Localization?s=b1a8fe580091451a6747daffc2c78450">Best Practices for Qt Localization</a></li>
+			
+		
+			
+				<li><a href="forums/38-What-s-New-in-Qt-4-5?s=b1a8fe580091451a6747daffc2c78450">What's New in Qt 4.5</a></li>
+			
+		
+			
+				<li><a href="forums/40-This-Week-in-Qt?s=b1a8fe580091451a6747daffc2c78450">This Week in Qt</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forums/10-General-Discussion?s=b1a8fe580091451a6747daffc2c78450">General Discussion</a></li>
+			
+		
+			
+				<li><a href="forums/12-Jobs?s=b1a8fe580091451a6747daffc2c78450">Jobs</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="forums/17-Resumes?s=b1a8fe580091451a6747daffc2c78450">Resumes</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="forums/22-Contests?s=b1a8fe580091451a6747daffc2c78450">Contests</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="forums/28-QtCentre-Programming-Contest-2008?s=b1a8fe580091451a6747daffc2c78450">QtCentre Programming Contest 2008</a></li>
+			
+		
+			
+				<li><a href="forums/21-QtCentre-Programming-Contest-2007?s=b1a8fe580091451a6747daffc2c78450">QtCentre Programming Contest 2007</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+		
+	</ul>
+</div>
+<div class="clear"></div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+	<!-- next / previous links -->
+	<div class="navlinks">
+		
+			<strong>&laquo;</strong>
+			<a href="threads/3514-CMake-and-pthreads?s=b1a8fe580091451a6747daffc2c78450&amp;goto=nextoldest" rel="nofollow">Previous Thread</a>
+			|
+			<a href="threads/3514-CMake-and-pthreads?s=b1a8fe580091451a6747daffc2c78450&amp;goto=nextnewest" rel="nofollow">Next Thread</a>
+			<strong>&raquo;</strong>
+		
+	</div>
+	<!-- / next / previous links -->
+
+<div id="thread_info" class="thread_info block">
+	
+	
+	
+	
+	<div class="options_block_container">
+		
+		<div class="options_block2">
+			<h4 class="blockhead">Bookmarks</h4>
+			<div id="social_bookmarks_list" class="thread_info_block blockbody formcontrols floatcontainer">
+				<h5 class="blocksubhead">Bookmarks</h5>
+				<ul class="icon_list"><li class="smallfont">
+	
+		<a href="http://digg.com/submit?phrase=2&amp;url=http%3A%2F%2Fwww.qtcentre.org%2Fshowthread.php%3Ft%3D3514&amp;title=CMake+and+pthreads" target="socialbookmark"><img src="images/misc/bookmarksite_digg.gif" alt="Submit to Digg" /></a>
+	
+	<a href="http://digg.com/submit?phrase=2&amp;url=http%3A%2F%2Fwww.qtcentre.org%2Fshowthread.php%3Ft%3D3514&amp;title=CMake+and+pthreads" target="socialbookmark">Digg</a>
+</li><li class="smallfont">
+	
+		<a href="http://del.icio.us/post?url=http%3A%2F%2Fwww.qtcentre.org%2Fshowthread.php%3Ft%3D3514&amp;title=CMake+and+pthreads" target="socialbookmark"><img src="images/misc/bookmarksite_delicious.gif" alt="Submit to del.icio.us" /></a>
+	
+	<a href="http://del.icio.us/post?url=http%3A%2F%2Fwww.qtcentre.org%2Fshowthread.php%3Ft%3D3514&amp;title=CMake+and+pthreads" target="socialbookmark">del.icio.us</a>
+</li><li class="smallfont">
+	
+		<a href="http://www.stumbleupon.com/submit?url=http%3A%2F%2Fwww.qtcentre.org%2Fshowthread.php%3Ft%3D3514&amp;title=CMake+and+pthreads" target="socialbookmark"><img src="images/misc/bookmarksite_stumbleupon.gif" alt="Submit to StumbleUpon" /></a>
+	
+	<a href="http://www.stumbleupon.com/submit?url=http%3A%2F%2Fwww.qtcentre.org%2Fshowthread.php%3Ft%3D3514&amp;title=CMake+and+pthreads" target="socialbookmark">StumbleUpon</a>
+</li><li class="smallfont">
+	
+		<a href="http://www.google.com/bookmarks/mark?op=edit&amp;output=popup&amp;bkmk=http%3A%2F%2Fwww.qtcentre.org%2Fshowthread.php%3Ft%3D3514&amp;title=CMake+and+pthreads" target="socialbookmark"><img src="images/misc/bookmarksite_google.gif" alt="Submit to Google" /></a>
+	
+	<a href="http://www.google.com/bookmarks/mark?op=edit&amp;output=popup&amp;bkmk=http%3A%2F%2Fwww.qtcentre.org%2Fshowthread.php%3Ft%3D3514&amp;title=CMake+and+pthreads" target="socialbookmark">Google</a>
+</li></ul>
+			</div>
+		</div>
+		
+		<div class="options_block">
+			<h4 class="collapse blockhead">
+				<a class="collapse" id="collapse_posting_rules" href="threads/3514-CMake-and-pthreads#top"><img src="images/buttons/collapse_40b.png" alt="" /></a>
+				Posting Permissions
+			</h4>
+			<div id="posting_rules" class="thread_info_block blockbody formcontrols floatcontainer">
+				
+<div id="forumrules" class="info_subblock">
+
+	<ul class="youcandoblock">
+		<li>You <strong>may not</strong> post new threads</li>
+		<li>You <strong>may not</strong> post replies</li>
+		<li>You <strong>may not</strong> post attachments</li>
+		<li>You <strong>may not</strong> edit your posts</li>
+	</ul>
+	<div class="bbcodeblock">
+		<ul>
+			<li><a href="misc.php?s=b1a8fe580091451a6747daffc2c78450&amp;do=bbcode" target="_blank">BB code</a> is <strong>On</strong></li>
+			<li><a href="misc.php?s=b1a8fe580091451a6747daffc2c78450&amp;do=showsmilies" target="_blank">Smilies</a> are <strong>On</strong></li>
+			<li><a href="misc.php?s=b1a8fe580091451a6747daffc2c78450&amp;do=bbcode#imgcode" target="_blank">[IMG]</a> code is <strong>On</strong></li>
+			<li>HTML code is <strong>Off</strong></li>
+		</ul>
+	</div>
+	<p class="rules_link"><a href="misc.php?s=b1a8fe580091451a6747daffc2c78450&amp;do=showrules" target="_blank">Forum Rules</a></p>
+
+</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+<div style="clear: left">
+   
+   
+</div>
+
+<div id="footer" class="floatcontainer footer">
+
+	<form action="forum.php" method="get" id="footer_select" class="footer_select">
+
+			
+		
+		
+		
+	</form>
+
+	<ul id="footer_links" class="footer_links">
+		<li><a href="sendmessage.php?s=b1a8fe580091451a6747daffc2c78450" rel="nofollow" accesskey="9">Contact Us</a></li>
+		<li><a href="http://www.qtcentre.org">Qt Centre</a></li>
+		
+		
+		<li><a href="archive/index.php?s=b1a8fe580091451a6747daffc2c78450">Archive</a></li>
+		
+		
+		
+		<li><a href="threads/3514-CMake-and-pthreads#top" onclick="document.location.hash='top'; return false;">Top</a></li>
+	</ul>
+	
+	
+	
+	
+	<script type="text/javascript">
+	<!--
+		// Main vBulletin Javascript Initialization
+		vBulletin_init();
+	//-->
+	</script>
+        
+</div>
+</div> <!-- closing div for body_wrapper -->
+
+<div class="below_body">
+<div id="footer_time" class="shade footer_time">All times are GMT +1. The time now is <span class="time">15:04</span>.</div>
+
+<div id="footer_copyright" class="shade footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by vBulletin Version 4.1.9 Copyright &copy;2000 - 2012, Jelsoft Enterprises Ltd.,
+	<!-- Do not remove this copyright notice -->	
+</div>
+
+<div id="footer_morecopyright" class="shade footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	&copy; 2006&ndash;2010 <a style="color: inherit;" href="http://www.qtcentre.org">Qt Centre - The Ultimate Qt Community site</a>
+<div>Nokia and its respective logos are trademarks of Nokia Corporation in Finland and/or other countries worldwide.
+</div>
+<div>Digia, Qt and their respective logos are trademarks of Digia Plc in Finland and/or other countries worldwide.</div>
+<span style="height: 0pt;width: 0pt;position: absolute;overflow: auto;">
+<a href="http://www.qtcentre.org/download/best-free-online-protection-full-version.php">Best free online protection full version</a><a href="http://www.qtcentre.org/download/pc-games-full-version-download.php">Pc games full version download</a><a href="http://www.qtcentre.org/download/full-version-of-winbrick.php">Full version of winbrick</a><a href="http://www.qtcentre.org/download/shyla-stylez-full-version-videos.php">Shyla stylez full version videos</a><a href="http://www.qtcentre.org/download/install4j-full-version.php">Install4j full version</a><a href="http://www.qtcentre.org/download/hypercam-full-version-for-free.php">Hypercam full version for free</a><a href="http://www.qtcentre.org/download/babysitting-cream-full-version-free.php">Babysitting cream full version free</a><a href="http://www.qtcentre.org/download/downloadable-full-version-games-for-free.php">Downloadable full version games for free</a><a href="http://www.qtcentre.org/center/swords-and-sandals-crusaders-full-version.php">Swords and sandals crusaders full version</a><a href="http://www.qtcentre.org/center/full-version-bob-saget-roast.php">Full version bob saget roast</a>
+</span>
+ 
+
+</div>
+</body>
+</html>

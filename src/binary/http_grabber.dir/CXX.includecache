@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ouam/Projects/httpclient_example/src/http_client_async.cpp
+iostream
+-
+istream
+-
+ostream
+-
+string
+-
+boost/asio.hpp
+-
+boost/bind.hpp
+-
+
