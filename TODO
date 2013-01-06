@@ -1,0 +1,26 @@
+setting up tests with ctest/cdash or with boost:
+
+
+http://cmake.org/Wiki/CMake/Testing_With_CTest
+ +
+http://www.cmake.org/cmake/help/v2.8.8/ctest.html
+ +
+
+
+ Using the dashboard scripts
+
+The dashboard branch contains a dashboard client helper script. Use these commands to track it:
+
+    $ mkdir -p ~/Dashboards/CMakeScripts 
+    $ cd ~/Dashboards/CMakeScripts 
+    $ git init 
+    $ git remote add -t dashboard origin git://cmake.org/cmake.git 
+    $ git pull origin 
+
+The cmake_common.cmake script contains setup instructions in its top comments. Update the dashboard branch to get the latest version of this script by simply running
+
+    $ git pull origin 
+
+
+
+
